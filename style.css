@@ -5,12 +5,20 @@ body {
 
 section {
 	height: 350px;
-	width: 500px;
+	width: 550px;
 	margin: 150px auto;
+}
+
+@-webkit-keyframes colors {
+	0% { background-color: rgb(255,0,0) }
+	33% { background-color: rgb(0,0,255) }
+	66% { background-color: rgb(0,255,0) }
+	99% { background-color: rgb(255,0,0) }
 }
 
 #front {
 	background-color: #FF0000;
+	-webkit-animation: colors 100s linear 0 infinite normal;
 	color: rgba(255,255,255,.9);
 	border: 1px solid #000000;
 	border-radius: 10px;
@@ -27,8 +35,6 @@ section {
 	-moz-box-shadow:    0px 2px 4px rgba(0,0,0,0.50), inset 0px 1px 0px rgba(255,255,255,0.30);
 	-webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.50), inset 0px 1px 0px rgba(255,255,255,0.30);
 	box-shadow:         0px 2px 4px rgba(0,0,0,0.50), inset 0px 1px 0px rgba(255,255,255,0.30);
-	
-
 }
 
 #front h1 {
