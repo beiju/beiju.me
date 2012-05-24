@@ -21,7 +21,7 @@ section {
 	-webkit-animation: colors 100s linear 0 infinite normal;
 	color: rgba(255,255,255,.9);
 	border: 1px solid #000000;
-	border-radius: 10px;
+	border-radius: 9px;
 	text-align: center;
 	position: relative;
 	
