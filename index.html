@@ -36,6 +36,10 @@
 	</div>
 	
 	<script>
+	setTimeout(function() {
+		document.body.className += ' loaded';
+	}, 200)
+	
 	var lastCycle = Date.now(), length = 20*60*1000;
 	setInterval(function() {
 		var diff = Date.now() - lastCycle;

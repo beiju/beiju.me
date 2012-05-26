@@ -3,6 +3,8 @@ body {
 	font-family: 'Helvetica Neue', sans-serif;
 	width: 34.375em;
 	margin: 9.375em auto 3.125em;
+	opacity: 0;
+	transition: opacity 300ms ease-in;
 }
 
 #wrap {
@@ -26,12 +28,15 @@ section {
 	color: rgba(255,255,255,.9);
 	text-shadow: 0 .0625em 0 rgba(0,0,0,0.50);
 	backface-visibility: hidden;
+}
+.loaded section {
 	transition: transform 850ms ease-in-out 100ms;
 }
 
 #front {
 	background-color: hsl(0,100%,50%);	
 	background-clip: padding;
+	z-index: 20000;
 }
 
 #front h1 {
@@ -71,7 +76,7 @@ section {
 	background-image: linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
 	box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.1);
 	transform: rotateY(180deg);
-	
+	z-index: 1;
 }
 
 #back h1 {
@@ -170,3 +175,7 @@ li a {
 #social .twitter a { background-image: url(img/twitter.png); }
 #social .forrst a { background-image: url(img/forrst.png); }
 #social .github a { background-image: url(img/github.png); }
+
+body.loaded {
+	opacity: 1;
+}
