@@ -1,5 +1,5 @@
 body {
-	background: url(noise.png) #D8D8D8 repeat;
+	background: url(img/noise.png) #D8D8D8 repeat;
 	font-family: 'Helvetica Neue', sans-serif;
 	width: 34.375em;
 	margin: 9.375em auto 3.125em;
@@ -61,7 +61,7 @@ section {
 }
 
 #back {	
-	background-image: linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(noise.png);
+	background-image: linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
 	box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.1);
 	transform: rotateY(180deg);
 	
@@ -147,7 +147,7 @@ li a {
 	display: block;
 }
 
-#social .tumblr a { background-image: url(tumblr.png); }
-#social .twitter a { background-image: url(twitter.png); }
-#social .forrst a { background-image: url(forrst.png); }
-#social .github a { background-image: url(github.png); }
+#social .tumblr a { background-image: url(img/tumblr.png); }
+#social .twitter a { background-image: url(img/twitter.png); }
+#social .forrst a { background-image: url(img/forrst.png); }
+#social .github a { background-image: url(img/github.png); }
