@@ -29,18 +29,8 @@ section {
 	transition: transform 850ms ease-in-out 100ms;
 }
 
-@keyframes colors {
-	0% { background-color: rgb(255,0,0) }
-	33% { background-color: rgb(0,0,255) }
-	66% { background-color: rgb(0,255,0) }
-	99% { background-color: rgb(255,0,0) }
-}
-
 #front {
-	background-color: #FF0000;
-/*	animation: colors 500s linear 0 infinite normal;*/
-	
-	background-image: linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 14%, rgba(0,0,0,0.30) 14%, rgba(0,0,0,0.40) 28%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.30) 36%, rgba(0,0,0,0.30) 100%);
+	background-color: hsl(0,100%,50%);	
 	background-clip: padding;
 }
 
@@ -50,6 +40,23 @@ section {
 	padding: .140625em 0;
 	border-bottom: .015625em solid black;
 	text-shadow: 0 -.015625em .015625em rgba(0,0,0,0.59);
+	background-image: linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.40) 100%);
+	border-radius: .140625em .140625em 0 0;
+}
+#front:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background-image: linear-gradient(-90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,.15) 5%);
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 6.0625em;
+	z-index: 1;
+	border-radius: 0 0 .140625em .140625em;
+}
+#front * {
+	z-index: 5;
 }
 
 #dog {
@@ -91,6 +98,7 @@ ul {
 
 li {
 	border-radius: .45em;
+	background-clip: padding-box;
 	background-color: rgba(0,0,0,0.39);
 	border: .0625em solid #000000;
 	box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
