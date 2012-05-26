@@ -1,15 +1,35 @@
 body {
 	background: url(noise.png) #D8D8D8 repeat;
 	font-family: 'Helvetica Neue', sans-serif;
+	width: 34.375em;
+	margin: 9.375em auto 3.125em;
+}
+
+#wrap {
+	transform-style: preserve-3d;
+	perspective: 1000;
+	position: relative;
+	height: 21.875em;
+	width: 34.375em;
+	margin: 9.375em auto 3.125em;
+	
 }
 
 section {
-	height: 350px;
-	width: 550px;
-	margin: 150px auto;
+	height: 100%;
+	width: 100%;
+	border: .0625em solid #000000;
+	border-radius: .5625em;
+	text-align: center;
+	position: absolute;
+	box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.30);
+	color: rgba(255,255,255,.9);
+	text-shadow: 0 .0625em 0 rgba(0,0,0,0.50);
+	backface-visibility: hidden;
+	transition: transform 850ms ease-in-out 100ms;
 }
 
-@-webkit-keyframes colors {
+@keyframes colors {
 	0% { background-color: rgb(255,0,0) }
 	33% { background-color: rgb(0,0,255) }
 	66% { background-color: rgb(0,255,0) }
@@ -18,39 +38,116 @@ section {
 
 #front {
 	background-color: #FF0000;
-	-webkit-animation: colors 100s linear 0 infinite normal;
-	color: rgba(255,255,255,.9);
-	border: 1px solid #000000;
-	border-radius: 9px;
-	text-align: center;
-	position: relative;
+/*	animation: colors 500s linear 0 infinite normal;*/
 	
-	background-image: -o-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 14%, rgba(0,0,0,0.30) 14%, rgba(0,0,0,0.40) 28%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.30) 36%, rgba(0,0,0,0.30) 100%);
-	background-image: -moz-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 14%, rgba(0,0,0,0.30) 14%, rgba(0,0,0,0.40) 28%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.30) 36%, rgba(0,0,0,0.30) 100%);
-	background-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 14%, rgba(0,0,0,0.30) 14%, rgba(0,0,0,0.40) 28%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.30) 36%, rgba(0,0,0,0.30) 100%);
-	background-image: -ms-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 14%, rgba(0,0,0,0.30) 14%, rgba(0,0,0,0.40) 28%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.30) 36%, rgba(0,0,0,0.30) 100%);
 	background-image: linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 14%, rgba(0,0,0,0.30) 14%, rgba(0,0,0,0.40) 28%, rgba(0,0,0,0.55) 28%, rgba(0,0,0,0.30) 36%, rgba(0,0,0,0.30) 100%);
-	-webkit-background-clip: padding;
-	
-	-moz-box-shadow:    0px 2px 4px rgba(0,0,0,0.50), inset 0px 1px 0px rgba(255,255,255,0.30);
-	-webkit-box-shadow: 0px 2px 4px rgba(0,0,0,0.50), inset 0px 1px 0px rgba(255,255,255,0.30);
-	box-shadow:         0px 2px 4px rgba(0,0,0,0.50), inset 0px 1px 0px rgba(255,255,255,0.30);
+	background-clip: padding;
 }
 
 #front h1 {
 	font-size: 4em;
 	margin: 0;
-	padding: 9px 0;
-	border-bottom: 1px solid black;
-	text-shadow: 0px -1px 1px rgba(0,0,0,0.59);
-}
-
-#front p {
-	text-shadow: 0px 1px 0px rgba(0,0,0,0.50);
+	padding: .15625em 0;
+	border-bottom: .015625em solid black;
+	text-shadow: 0 -.015625em .015625em rgba(0,0,0,0.59);
 }
 
 #dog {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	width: 26.125em;
+	height: 11.375;
 }
+
+#back {	
+	background-image: linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(noise.png);
+	box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.1);
+	transform: rotateY(180deg);
+	
+}
+
+#back h1 {
+	font: inherit;
+}
+
+body:hover #back, #back:target {
+   transform: rotateY(0deg);
+}
+body:hover #front {
+    transform: rotateY(-180deg);
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	border-radius: .45em;
+	background-color: rgba(0,0,0,0.39);
+	border: .0625em solid #000000;
+	box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
+	margin: 1em;
+}
+
+li:active, li:focus {
+	background-color: rgba(0,0,0,.6);
+	opacity: .8;
+	transform: translateY(1px);
+}
+
+li a {
+	padding: .55em 0 .6em;
+	display: block;
+}
+
+#portfolio {
+	margin: 0 8.375em;
+}
+
+#portfolio li {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+#portfolio li:active, #portfolio li:focus {
+	box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .25em rgba(0,0,0,0.80);
+}
+
+#portfolio .mathhammer { background-image: linear-gradient(270deg, #7b0606 0%, #480404 100%); }
+#portfolio .roboknights { background-image: linear-gradient(270deg, #4f4f4f 0%, #333333 100%); }
+#portfolio .mentaurus { background-image: linear-gradient(270deg, #ac8d04 0%, #705903 100%); }
+#portfolio .frc-timer { background-image:  linear-gradient(270deg, #036c03 0%, #044304 100%); }
+
+.tumblr, .twitter { float: right; clear: right; }
+.forrst, .github { float: left; clear: left; }
+
+#social {
+	clear: both;
+}
+#social li {
+	margin: .4375em 1em .75em;
+}
+#social li a {
+	padding: .5em;
+	height: 6.375em;
+	width: 6.375em;
+	background: no-repeat center 2em;
+}
+
+#beiju {
+	margin: -.55em 0 0;
+	display: block;
+}
+
+#social .tumblr a { background-image: url(tumblr.png); }
+#social .twitter a { background-image: url(twitter.png); }
+#social .forrst a { background-image: url(forrst.png); }
+#social .github a { background-image: url(github.png); }
