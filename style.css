@@ -47,7 +47,7 @@ section {
 #front h1 {
 	font-size: 4em;
 	margin: 0;
-	padding: .15625em 0;
+	padding: .140625em 0;
 	border-bottom: .015625em solid black;
 	text-shadow: 0 -.015625em .015625em rgba(0,0,0,0.59);
 }
