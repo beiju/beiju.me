@@ -1,0 +1,21 @@
+var lastCycle = Date.now(), length = 20*60*1000;
+setInterval(function() {
+	var diff = Date.now() - lastCycle;
+	if (diff >= length) {
+		lastCycle = Date.now();
+		return;
+	}
+	
+	if (document.elementFromPoint(outerWidth/2, 500).parentNode.id == "front" && pageVisible()) {
+		document.getElementById('front').style.backgroundColor = 'hsl('+(360*(1-diff/length)|0)+',100%,50%)';
+		console.log('color changed to ', (360*(1-diff/length)|0));
+	}
+}, length/360)
+
+function pageVisible() {
+	if (typeof document.hidden == "boolean") return !document.hidden;
+	if (typeof document.webkitHidden == "boolean") return !document.webkitHidden;
+	if (typeof document.mozHidden == "boolean") return !document.mozHidden;
+	if (typeof document.msHidden == "boolean") return !document.msHidden;
+	return true; // Assume page is visible
+}
