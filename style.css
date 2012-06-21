@@ -182,11 +182,11 @@ li {
 	        background-clip: padding-box;
 	background-color: rgba(0,0,0,0.39);
 	border: .0625em solid #000000;
-	-webkit-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
-	   -moz-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
-	    -ms-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
-	     -o-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
-	        box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .125em rgba(0,0,0,0.50);
+	-webkit-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .125em rgba(0,0,0,0.50);
+	   -moz-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .125em rgba(0,0,0,0.50);
+	    -ms-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .125em rgba(0,0,0,0.50);
+	     -o-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .125em rgba(0,0,0,0.50);
+	        box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .125em rgba(0,0,0,0.50);
 	margin: 1em;
 }
 
@@ -215,11 +215,11 @@ li a {
 }
 
 #portfolio li:active, #portfolio li:focus {
-	-webkit-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .25em rgba(0,0,0,0.80);
-	   -moz-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .25em rgba(0,0,0,0.80);
-	    -ms-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .25em rgba(0,0,0,0.80);
-	     -o-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .25em rgba(0,0,0,0.80);
-	        box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0px .125em .25em rgba(0,0,0,0.80);
+	-webkit-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .25em rgba(0,0,0,0.80);
+	   -moz-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .25em rgba(0,0,0,0.80);
+	    -ms-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .25em rgba(0,0,0,0.80);
+	     -o-box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .25em rgba(0,0,0,0.80);
+	        box-shadow: 0 .0625em 0 rgba(255, 255, 255, 0.07), inset 0 .125em .25em rgba(0,0,0,0.80);
 }
 
 #portfolio .mathhammer { 
@@ -295,7 +295,24 @@ li a {
 	        transform: translateY(1px);
 }
 
-#social .tumblr a { background-image: url(img/tumblr.png); }
-#social .twitter a { background-image: url(img/twitter.png); }
-#social .forrst a { background-image: url(img/forrst.png); }
-#social .github a { background-image: url(img/github.png); }
+#social .tumblr a { background-image: url(img/tumblr.png); background-size: 3.0em 4.5625em; }
+#social .twitter a { background-image: url(img/twitter.png); background-size: 6.1875em 4.4375em; }
+#social .forrst a { background-image: url(img/forrst.png); background-size: 3.5625em 4.75em; }
+#social .github a { background-image: url(img/github.png); background-size: 5.125em 4.5625em; }
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	#social .tumblr a { background-image: url(img/tumblr@2x.png); }
+	#social .twitter a { background-image: url(img/twitter@2x.png); }
+	#social .forrst a { background-image: url(img/forrst@2x.png); }
+	#social .github a { background-image: url(img/github@2x.png); }
+	
+	body {
+		background-image: url(img/noise@2x.png);
+		background-size: 50;
+	}
+	
+	#back { /* At least I only have to do the modern webkit version of this, since it's a webkit-specific media query */
+		background-image: -webkit-linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise@2x.png);
+		background-size: auto, 50;
+	}
+}
