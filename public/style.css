@@ -79,7 +79,7 @@ section {
 	background-image:    -moz-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.40) 100%);
 	background-image:     -ms-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.40) 100%);
 	background-image:      -o-linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.40) 100%);
-	background-image:         linear-gradient(-90deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.40) 100%);
+	background-image:         linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,0.40) 100%);
 	-webkit-border-radius: .140625em .140625em 0 0;
 	   -moz-border-radius: .140625em .140625em 0 0;
 	    -ms-border-radius: .140625em .140625em 0 0;
@@ -92,7 +92,7 @@ section {
 	content:    -moz-linear-gradient(-90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,.15) 5%);
 	content:     -ms-linear-gradient(-90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,.15) 5%);
 	content:      -o-linear-gradient(-90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,.15) 5%);
-	content:         linear-gradient(-90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,.15) 5%);
+	content:         linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,.15) 5%);
 	display: block;
 	position: absolute;
 	left: 0;
@@ -125,7 +125,7 @@ section {
 	background-image:    -moz-linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
 	background-image:     -ms-linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
 	background-image:      -o-linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
-	background-image:        linear-gradient(-90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
+	background-image:         linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.78) 100%), url(img/noise.png);
 	-webkit-box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.1);
 	   -moz-box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.1);
 	    -ms-box-shadow: 0 .125em .25em rgba(0,0,0,0.50), inset 0 .0625em 0 rgba(255,255,255,0.1);
@@ -228,7 +228,7 @@ li a {
 	background-image:    -moz-linear-gradient(270deg, #7b0606 0%, #480404 100%);
 	background-image:     -ms-linear-gradient(270deg, #7b0606 0%, #480404 100%);
 	background-image:      -o-linear-gradient(270deg, #7b0606 0%, #480404 100%);
-	background-image:         linear-gradient(270deg, #7b0606 0%, #480404 100%); 
+	background-image:         linear-gradient(180deg, #7b0606 0%, #480404 100%); 
 }
 #portfolio .roboknights { 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4f4f), to(#333333));
@@ -236,7 +236,7 @@ li a {
 	background-image:    -moz-linear-gradient(270deg, #4f4f4f 0%, #333333 100%);
 	background-image:     -ms-linear-gradient(270deg, #4f4f4f 0%, #333333 100%);
 	background-image:      -o-linear-gradient(270deg, #4f4f4f 0%, #333333 100%);
-	background-image:         linear-gradient(270deg, #4f4f4f 0%, #333333 100%);
+	background-image:         linear-gradient(180deg, #4f4f4f 0%, #333333 100%);
 }
 #portfolio .mentaurus { 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#ac8d04), to(#705903));
@@ -244,7 +244,7 @@ li a {
 	background-image:    -moz-linear-gradient(270deg, #ac8d04 0%, #705903 100%);
 	background-image:     -ms-linear-gradient(270deg, #ac8d04 0%, #705903 100%);
 	background-image:      -o-linear-gradient(270deg, #ac8d04 0%, #705903 100%);
-	background-image:         linear-gradient(270deg, #ac8d04 0%, #705903 100%); 
+	background-image:         linear-gradient(180deg, #ac8d04 0%, #705903 100%); 
 }
 #portfolio .frc-timer { 
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#036c03), to(#044304));
@@ -252,7 +252,7 @@ li a {
 	background-image:    -moz-linear-gradient(270deg, #036c03 0%, #044304 100%);
 	background-image:     -ms-linear-gradient(270deg, #036c03 0%, #044304 100%);
 	background-image:      -o-linear-gradient(270deg, #036c03 0%, #044304 100%);
-	background-image:         linear-gradient(270deg, #036c03 0%, #044304 100%); 
+	background-image:         linear-gradient(180deg, #036c03 0%, #044304 100%); 
 }
 
 .tumblr, .twitter { float: left; clear: left; }
